@@ -35,14 +35,11 @@ public class Runners {
 
     // adds to hash map or increment if key already exists
     private void addToMap(Integer meetPoint) {
-
         String meetPointKey = meetPoint.toString();
         if (this.meetPoints.containsKey(meetPointKey)) {
             Integer curVal = this.meetPoints.get(meetPointKey);
             this.meetPoints.put(meetPointKey, curVal + 1);
         } else {
-            // when we first save to the hashmap we actually want to set the value to 2 to reflect
-            // the fact that 2 runners have met
             this.meetPoints.put(meetPointKey, 1);
         }
 
